@@ -1,16 +1,24 @@
 {
-  "name": "d",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "amrToMp3": "^2.0.0",
-    "ffmpeg-static": "^5.0.0"
-  }
+    "name": "slk-to-mp3",
+    "version": "1.0.0",
+    "description": "slk / amr to mp3 nodeJS module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lqzhgood/slkToMp3.git"
+    },
+    "keywords": [],
+    "author": "lqzhgood",
+    "license": "GPLv3",
+    "bugs": {
+        "url": "https://github.com/lqzhgood/slkToMp3/issues"
+    },
+    "homepage": "https://github.com/lqzhgood/slkToMp3",
+    "dependencies": {
+        "amrToMp3": "^2.0.0",
+        "ffmpeg-static": "^5.0.0"
+    }
 }

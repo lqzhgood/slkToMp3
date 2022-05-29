@@ -1,4 +1,7 @@
-# slkToMp3
+# slk-to-mp3
+
+[![npm version](https://img.shields.io/npm/v/create-lqzh-app.svg?style=flat-square)](https://github.com/lqzhgood/slkToMp3)
+[![npm license](https://img.shields.io/npm/l/create-lqzh-app.svg?style=flat-square)](https://github.com/lqzhgood/slkToMp3)
 
 slk / amr to mp3 nodeJS module
 
@@ -6,10 +9,16 @@ decode QQ / Wechat slk to mp3
 
 ### Use
 
+```shell
+npm i slk-to-mp3
+```
+
 ```js
 const slkToMp3 = require('slkToMp3');
 
-await convert(inputFile, outputDir, [outName]);
+(async () => {
+    await convert(inputFile, outputDir, [outName]);
+})();
 ```
 
 `outName` is optional, default is `input File Name`
