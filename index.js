@@ -15,13 +15,13 @@ function readHead(f) {
 function silkToMp3(f, outDir, outName) {
     const slikPath = path.join(__dirname, './lib/silk2mp3-windows/silk_v3_decoder.exe');
     const oPcm = path.join(outDir, `${outName}.pcm`);
-    exec(`${slikPath} ${f} ${oPcm}`);
+    exec(`"${slikPath}" "${f}" "${oPcm}"`);
 
     const oMp3 = path.join(outDir, `${outName}.mp3`);
 
     // sox -r 24000 -e signed -b 16 -c 1 1.raw 1_sox.mp3
     // 音质好像差一点点
-    exec(`${ffmpegPath} -loglevel quiet -y -f s16le -ar 24000 -ac 1 -i ${oPcm} -ar 24000 -b:a 320k ${oMp3}`);
+    exec(`"${ffmpegPath}" -loglevel quiet -y -f s16le -ar 24000 -ac 1 -i "${oPcm}" -ar 24000 -b:a 320k "${oMp3}"`);
 
     fs.unlinkSync(oPcm);
     return oMp3;
